@@ -1,5 +1,6 @@
 package com.kimfri.sqlite;
 
+import java.io.File;
 import java.sql.*;
 
 /**
@@ -17,6 +18,9 @@ public class Connect {
       //conn = DriverManager.getConnection("jdbc:sqlite:d:\\sqlite-data\\firstdb.sqlite");
 
       conn = DriverManager.getConnection("jdbc:sqlite:c:\\Users\\kimfr\\utv\\java\\sqllite\\sqlite-test\\firstdb.sqlite");
+//      ClassLoader classLoader = getClass().getClassLoader();
+//      File file = new File(classLoader.getResource("firstdb.sqlite").getFile());
+//      conn = DriverManager.getConnection(file.toString());
       //JOptionPane.showConfirmDialog(null, conn);
     } catch (Exception e) {
       e.printStackTrace();
@@ -28,7 +32,7 @@ public class Connect {
     Connect c = new Connect();
     c.getConnection();
     c.createTable();
-    c.add();
+//    c.add();
     c.doIt();
     //c.add();
 //    c.add1000();
